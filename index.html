@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WHACK-A-WAVE - Control the Pandemic</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0a1a" />
+    <meta name="description" content="An arcade game about controlling the basic reproduction number. Manage pandemic waves by deploying public-health interventions across multiple regions." />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: #030712;
+        overflow: hidden;
+        font-family: monospace;
+      }
+
+      body.mobile {
+        padding-top: env(safe-area-inset-top);
+      }
+
+      /* Phaser mount target */
+      #app {
+        position: fixed;
+        inset: 0;
+        width: 100dvw;
+        height: 100dvh;
+        background: #0a0a1a;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #app canvas,
+      body > canvas {
+        display: block;
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <!-- Phaser -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Game entry -->
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
+
